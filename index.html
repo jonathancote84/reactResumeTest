@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+</head>
+<body>
+<div id="application-root"></div>
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<script type="text/babel">
+  // Our code will go here
+  const appRoot = document.querySelector('#application-root');
+//   const App = <div>
+//   <h1>Hello, world!</h1>
+//   <p>How are you today?</p>
+//   <h2>Look what React can do!</h2>
+// </div>
+  // const element = '<h1>Hello, world!</h1>';
+  function App(props) {
+    console.log(props);
+    return(
+      <div>{props.children}</div>
+    );
+  };
+  ReactDOM.render(
+    <App>
+      <header>
+        <h1>Sally Student</h1>
+        <img src='Llanna.jpg' alt="Sally's headshot"></img>   
+      </header> 
+      <main>
+          <section>
+           <h2>Education</h2>
+            <ul>
+              <li>Coranado Highschool, Lubbuck, TX, 2008-2012</li>
+              <li>University of Texas, Austin, TX,  2013-2016</li>
+            </ul>
+          </section>
+          <section>
+           <h2>Employment History</h2>
+               <h3>Managed Sharks International</h3>
+               <ul>
+                 <li>Shark Surgeon</li>
+                 <li>2017- present</li>
+                 <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex </li>
+               </ul>
+                 <h3>Embercore Consolidated</h3>
+                 <ul>
+                   <li>Accountant</li>
+                   <li>2015-2016</li>
+                   <li>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</li>
+               </ul>
+          </section>
+          <section>
+            <h2>Contact Info:</h2>
+            <p>Twitter: <a href="https://twitter.com/sallyStudent">@sallyStudent</a></p>
+            <p>Email: <a href="mailto:sallystudent95@gmail.com">sallystudent95@gmail.com</a></p>
+            <p>Phone: (512)732-1365</p>
+          </section>
+        </main>
+        <footer>© 2017 Sally A. Student</footer>
+    </App>
+    ,appRoot);
+</script>
+</body>
+</html>
